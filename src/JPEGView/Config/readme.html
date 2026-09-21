@@ -1087,6 +1087,13 @@
                     Shows a slideshow of the files in the folder "c:\pictures" using random ordering and an interval of 2 seconds, forcing full screen mode for the slide show.
                 </li>
                 <li>
+					<code>/converttojpeg [HEIC/HEIF file(s)]</code><br />
+					Converts one or more HEIC or HEIF files to JPEG files in the same folder without opening the JPEGView window.
+					Existing files are never overwritten; a numbered suffix is added when needed. The installed version also adds
+					a "Convert to JPEG with JPEGView" command to the Windows Explorer context menu for HEIC and HEIF files.<br />
+					Example: <code>jpegview.exe /converttojpeg "photo 1.heic" "photo 2.heic"</code>
+				</li>
+				<li>
                     <code>/ini [ini file title]</code><br />
                     Uses the INI file as specified. The file extension can be omitted, ".ini" is added when it is missing.
                     The file name must neither contain an absolute nor a relative path, nor space characters.<br />

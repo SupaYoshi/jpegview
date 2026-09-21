@@ -222,6 +222,7 @@
 				<ComponentRef Id="libde265DLL"/>
 				<ComponentRef Id="heifDLL"/>
 				<ComponentRef Id="avifDLL"/>
+				<ComponentRef Id="HEIFConvertContextMenu"/>
 			</Feature>
 			<!-- dcraw is compiled into JPEGView, but doesn't support the latest (modern) camera formats -->
 			<Feature Id="FeatureRAW" Title="Camera RAW Files Support (modern cameras)">
@@ -513,6 +514,16 @@
 					</Component>
 					<Component Id="avifDLL" Guid="1597e47e-b6ae-44f4-b28a-6b7503bdd1d2">
 						<File Id="avif.dll" Name="avif.dll" Source="$(var.AvifDllFolder)\avif.dll" />
+					</Component>
+					<Component Id="HEIFConvertContextMenu" Guid="*" Win64="$(var.Win64)">
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heic\shell\convert.JPEGView.exe" Value="!(loc.ExplorerMenuConvertToJPEGREG)" Type="string" KeyPath="yes" />
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heic\shell\convert.JPEGView.exe" Name="Icon" Value="[APPLICATIONFOLDER]JPEGView.exe,0" Type="string" />
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heic\shell\convert.JPEGView.exe" Name="MultiSelectModel" Value="Player" Type="string" />
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heic\shell\convert.JPEGView.exe\command" Value="&quot;[APPLICATIONFOLDER]JPEGView.exe&quot; /converttojpeg %*" Type="string" />
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heif\shell\convert.JPEGView.exe" Value="!(loc.ExplorerMenuConvertToJPEGREG)" Type="string" />
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heif\shell\convert.JPEGView.exe" Name="Icon" Value="[APPLICATIONFOLDER]JPEGView.exe,0" Type="string" />
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heif\shell\convert.JPEGView.exe" Name="MultiSelectModel" Value="Player" Type="string" />
+						<RegistryValue Root="HKLM" Key="SOFTWARE\Classes\SystemFileAssociations\.heif\shell\convert.JPEGView.exe\command" Value="&quot;[APPLICATIONFOLDER]JPEGView.exe&quot; /converttojpeg %*" Type="string" />
 					</Component>
 
 

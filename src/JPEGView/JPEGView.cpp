@@ -3,9 +3,15 @@
 #include "stdafx.h"
 #include <locale.h>
 #include <gdiplus.h>
+#include <shellapi.h>
+#include <vector>
 #include "resource.h"
 #include "MainDlg.h"
 #include "SettingsProvider.h"
+#include "NLS.h"
+#include "JPEGProvider.h"
+#include "SaveImage.h"
+#include "ProcessingThreadPool.h"
 
 #ifdef DEBUG
 #include <dbghelp.h>
@@ -16,6 +22,93 @@
 CAppModule _Module;
 
 static HWND _HWNDOtherInstance = NULL;
+
+static bool ParseCommandLineForJPEGConversion(std::vector<CString>& files) {
+	int argc = 0;
+	LPWSTR* argv = ::CommandLineToArgvW(::GetCommandLineW(), &argc);
+	if (argv == NULL) {
+		return false;
+	}
+
+	bool conversionMode = false;
+	for (int i = 1; i < argc; i++) {
+		if (_wcsicmp(argv[i], L"/converttojpeg") == 0) {
+			conversionMode = true;
+		} else if (conversionMode) {
+			files.push_back(CString(argv[i]));
+		}
+	}
+
+	::LocalFree(argv);
+	return conversionMode;
+}
+
+static bool IsHEIFFile(LPCTSTR fileName) {
+	CString extension(fileName);
+	int dot = extension.ReverseFind(_T('.'));
+	if (dot < 0) {
+		return false;
+	}
+	extension = extension.Mid(dot);
+	return extension.CompareNoCase(_T(".heic")) == 0 || extension.CompareNoCase(_T(".heif")) == 0;
+}
+
+static CString GetJPEGOutputFileName(LPCTSTR inputFileName) {
+	CString baseName(inputFileName);
+	int dot = baseName.ReverseFind(_T('.'));
+	if (dot >= 0) {
+		baseName = baseName.Left(dot);
+	}
+
+	CString outputFileName = baseName + _T(".jpg");
+	for (int index = 1; ::GetFileAttributes(outputFileName) != INVALID_FILE_ATTRIBUTES; index++) {
+		outputFileName.Format(_T("%s (%d).jpg"), (LPCTSTR)baseName, index);
+	}
+	return outputFileName;
+}
+
+static int ConvertHEIFsToJPEG(const std::vector<CString>& files) {
+	CNLS::ReadStringTable(CNLS::GetStringTableFileName(CSettingsProvider::This().Language()));
+	CProcessingThreadPool::This().CreateThreadPoolThreads();
+
+	std::vector<CString> failedFiles;
+	{
+		CJPEGProvider imageProvider(NULL, 1, 2);
+		CImageProcessingParams neutralParams(0.0, 1.0, 1.0, 0.0, 0.0, 0.5, 0.5, 0.25, 0.5, 0.0, 0.0, 0.0);
+		CProcessParams loadParams(1, 1, CSize(1, 1), CRotationParams(0), 0, 1.0,
+			Helpers::ZM_FitToScreenNoZoom, CPoint(0, 0), neutralParams, PFLAG_NoProcessingAfterLoad);
+
+		for (std::vector<CString>::const_iterator file = files.begin(); file != files.end(); ++file) {
+			bool outOfMemory = false;
+			bool exceptionError = false;
+			CJPEGImage* image = NULL;
+			if (IsHEIFFile(*file) && ::GetFileAttributes(*file) != INVALID_FILE_ATTRIBUTES) {
+				image = imageProvider.RequestImage(NULL, CJPEGProvider::NONE, *file, 0, loadParams, outOfMemory, exceptionError);
+			}
+
+			bool saved = image != NULL && CSaveImage::SaveImage(GetJPEGOutputFileName(*file), image,
+				neutralParams, PFLAG_None, true, false, false);
+			if (image != NULL) {
+				imageProvider.ClearRequest(image);
+			}
+			if (!saved) {
+				failedFiles.push_back(*file);
+			}
+		}
+	}
+
+	CProcessingThreadPool::This().StopAllThreads();
+	if (!failedFiles.empty()) {
+		CString message = CNLS::GetString(_T("Error saving file"));
+		message += _T(":\r\n\r\n");
+		for (std::vector<CString>::const_iterator file = failedFiles.begin(); file != failedFiles.end(); ++file) {
+			message += *file + _T("\r\n");
+		}
+		::MessageBox(NULL, message, CNLS::GetString(_T("Error")), MB_OK | MB_ICONERROR);
+	}
+
+	return failedFiles.empty() && !files.empty() ? 0 : 1;
+}
 
 static BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam) {
 	const int BUF_LEN = 255;
@@ -201,6 +294,18 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 
 	hRes = _Module.Init(NULL, hInstance);
 	ATLASSERT(SUCCEEDED(hRes));
+
+	std::vector<CString> filesToConvert;
+	if (ParseCommandLineForJPEGConversion(filesToConvert)) {
+		Gdiplus::GdiplusStartupInput gdiplusStartupInput;
+		ULONG_PTR gdiplusToken;
+		Gdiplus::GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
+		int conversionResult = ConvertHEIFsToJPEG(filesToConvert);
+		Gdiplus::GdiplusShutdown(gdiplusToken);
+		_Module.Term();
+		::CoUninitialize();
+		return conversionResult;
+	}
 
 	CString sStartupFile = ParseCommandLineForStartupFile(lpstrCmdLine);
 	int nAutostartSlideShow = (sStartupFile.GetLength() == 0) ? 0 : ParseCommandLineForAutostart(lpstrCmdLine);
