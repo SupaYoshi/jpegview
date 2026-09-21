@@ -63,4 +63,4 @@ runs:
         IncludePath: ${{ env.include_path }}
       run: |
         echo (Optional) IncludePath: %IncludePath%
-        msbuild.exe /property:Platform=${{ inputs.platform-arch }} /property:configuration="${{ inputs.build-config }}" src\JPEGView.sln
+        msbuild.exe /property:Platform=${{ inputs.platform-arch }} /property:PlatformToolset=v143 /property:configuration="${{ inputs.build-config }}" src\JPEGView.sln
