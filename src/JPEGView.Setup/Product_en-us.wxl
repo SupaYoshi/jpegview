@@ -25,6 +25,6 @@
 	<String Id="DescREG">JPEGView Associated File</String>
 	<String Id="ExplorerMenuEditREG">Edit with JPEGView</String>
 	<String Id="ExplorerMenuOpenREG">Open with JPEGView</String>
-	<String Id="ExplorerMenuConvertToJPEGREG">Convert to JPEG with JPEGView</String>
+	<String Id="ExplorerMenuConvertToJPEGREG">Omzetten naar JPEG met JPEGView</String>
 
 </WixLocalization>
