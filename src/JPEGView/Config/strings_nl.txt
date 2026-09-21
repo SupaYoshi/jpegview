@@ -1,0 +1,497 @@
+﻿//! This file must be encoded with UTF-8 (e.g. with Windows Notepad)
+//! LICENSE: This localization file is part of JPEGView <https://github.com/sylikc/jpegview> and distributed under the same license.  See <https://github.com/sylikc/jpegview/blob/master/LICENSE.txt> for more info.
+
+//! Standard  Filename Convention: 'strings_%languagecode%.txt' where %languagecode% is the ISO 639-1 language code e.g. 'en' for English (See <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>)
+//! Alternate Filename Convention: 'strings_%languagecode%-%countrycode%.txt' where %countrycode% is the ISO 3166-1 country code e.g. 'US' for United States (See <https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>)
+//!    Use the alternate filename convention only when the standard filename already exist (e.g. specifying a country-specific dialect for an existing language)
+
+////////////////////
+// ::: Translation Info ::: //
+//: ISO 639-1 code: nl
+//: ISO 3166-1 code: NL
+//: Language: Dutch (Nederlands)
+//: Translator(s) - Name <Contact Info/URL>: Walter Verkerk <https://github.com/SupaYoshi>, assisted by OpenAI Codex
+//: Last Updated: 2026-09-21
+//: Additional Notes: Uses familiar Dutch Windows terminology and concise labels.
+////////////////////
+
+////////////////////
+// ::: Instructions / Help ::: (help for translators only, does not need to be translated) //
+
+//? Line Format:    English string<tab>Translated string<newline>
+//? * Lines beginning with "//" (comments) are ignored
+//? * Blank lines are ignored
+//? * Lines without a <tab> are ignored
+//? * Lines with no text after the <tab> are ignored
+//? * Multiple tabs are permitted between English and Translated string, e.g. this is valid:    English string<tab><tab><tab>Translated string<newline>
+
+//? NOTE: %s %d have special meanings in the strings, so make sure they appear somewhere in the translated string!
+
+//? For the strings below which are short and have no context:
+//?   "in"        in context: is shorthand for "inch"
+//?   "cm"        in context: is shorthand for "centimeter"
+//?   "C - R"     in context: is "Cyan Red" colors
+//?   "M - G"     in context: is "Magenta Green" colors
+//?   "Y - B"     in context: is "Yellow Blue" colors
+//?   "yes"/"no"  in context: is for showing EXIF flags
+//?   "on"/"off"  in context: is for showing a setting active or not
+//?   "Filter"    in context: is used in Resize image, "sampling filter"
+//?   "Box"       in context: is used in Resize image sampling filter "Box filter"
+////////////////////
+
+
+// ::: Program Strings ::: (sorted alphabetically) //
+%d file(s) renamed, %d file(s) copied, %d folder(s) created	%d bestand(en) hernoemd, %d bestand(en) gekopieerd, %d map(pen) gemaakt
+%s camera raw images (embedded JPEGs only)	%s RAW-camera-afbeeldingen (alleen ingesloten JPEG's)
+%s images	%s afbeeldingen
+%s images (processed by Window Imaging Component - WIC)	%s afbeeldingen (verwerkt door Windows Imaging Component - WIC)
+'My Pictures' folder	Map 'Mijn afbeeldingen'
+About JPEGView (32-bit version)...	Over JPEGView (32-bitsversie)...
+About JPEGView (64-bit version)...	Over JPEGView (64-bitsversie)...
+Acquisition date:	Opnamedatum:
+Actual size of image	Werkelijke afbeeldingsgrootte
+Align image to horizontal or vertical line	Afbeelding uitlijnen op een horizontale of verticale lijn
+Alignment:	Uitlijning:
+All Files	Alle bestanden
+All existing user settings will be preserved.	Alle bestaande gebruikersinstellingen blijven behouden.
+Alternatively, right-click an image file of the given type in Windows Explorer and select 'Open with... > Choose default program'	U kunt ook in Verkenner met de rechtermuisknop op een afbeelding van het gekozen type klikken en 'Openen met... > Een standaardprogramma kiezen' selecteren
+Altitude (m):	Hoogte (m):
+Amount	Hoeveelheid
+Application:	Toepassing:
+Applications	Toepassingen
+Apply	Toepassen
+Apply Unsharp Mask	Onscherp masker toepassen
+Apply auto contrast correction using only visible section of image	Automatische contrastcorrectie alleen op het zichtbare deel toepassen
+Ascending	Oplopend
+Auto contrast and color correction	Automatische contrast- en kleurcorrectie
+Auto crop corrected image (avoids black border)	Gecorrigeerde afbeelding automatisch bijsnijden (voorkomt zwarte rand)
+Auto crop rotated image (avoids black border)	Gedraaide afbeelding automatisch bijsnijden (voorkomt zwarte rand)
+Auto zoom mode	Automatische zoommodus
+Back mouse button	Muisknop Terug
+Batch rename/copy of files	Bestanden in één keer hernoemen/kopiëren
+Blend	Overvloeien
+Bottom	Onder
+Box	Blok
+Brightness	Helderheid
+Browse...	Bladeren...
+C - R	C - R
+Camera model:	Cameramodel:
+Can't rename file	Kan bestand niet hernoemen
+Cancel	Annuleren
+Cannot read from parameter DB file '%s'!	Kan parameterdatabasebestand '%s' niet lezen!
+Cannot read parameter DB file '%s' because it is too large!	Kan parameterdatabasebestand '%s' niet lezen omdat het te groot is!
+Cannot write to parameter DB file '%s'!	Kan niet naar parameterdatabasebestand '%s' schrijven!
+Click and drag the mouse vertically to correct image tilt.	Klik en sleep verticaal met de muis om de scheefstand te corrigeren.
+Clipboard Image	Afbeelding van klembord
+Close	Sluiten
+Close help text display / Close JPEGView	Helptekst sluiten / JPEGView sluiten
+Color Correction	Kleurcorrectie
+Combine keys with '+'	Combineer toetsen met '+'
+Confirm	Bevestigen
+Confirm save default parameters	Opslaan van standaardparameters bevestigen
+Conflicting entries in Param DB	Conflicterende vermeldingen in parameterdatabase
+Continue rename/copy?	Doorgaan met hernoemen/kopiëren?
+Contrast	Contrast
+Contrast Correction	Contrastcorrectie
+Copy file path of the image to clipboard	Bestandspad van de afbeelding naar het klembord kopiëren
+Copy screen to clipboard / Copy processed full size image to clipboard	Scherm naar klembord kopiëren / Verwerkte afbeelding op volledige grootte naar klembord kopiëren
+Copying parameter DB to file '%s' failed. Reason: %s	Kopiëren van parameterdatabase naar bestand '%s' is mislukt. Reden: %s
+Correct converging lines (perspective correction)	Samenlopende lijnen corrigeren (perspectiefcorrectie)
+Creation date/time	Aanmaakdatum/-tijd
+Crop image	Afbeelding bijsnijden
+Crop the image and apply transformation? Cropping cannot be undone!	Afbeelding bijsnijden en transformatie toepassen? Bijsnijden kan niet ongedaan worden gemaakt!
+Ctrl + Left mouse	Ctrl + linkermuisknop
+Current image	Huidige afbeelding
+Cyan-Red	Cyaan-rood
+Darken Highlights	Hoge lichten donkerder maken
+Date	Datum
+Date placeholders use the modification date of the image.	Datumvariabelen gebruiken de wijzigingsdatum van de afbeelding.
+Day / Month / Year (as numbers)	Dag / maand / jaar (als getallen)
+Decoding this format requires the Microsoft Visual C++ Redistributable.	Voor het decoderen van deze indeling is Microsoft Visual C++ Redistributable vereist.
+Deep Shadows	Diepe schaduwen
+Delete	Verwijderen
+Delete current file on disk permanently	Huidig bestand definitief van schijf verwijderen
+Delete image file	Naar de prullenbak verplaatsen
+Descending	Aflopend
+Display image (EXIF) information	Afbeeldingsinformatie (EXIF) tonen
+Do you really want to delete the current image file on disk?	Wilt u het huidige afbeeldingsbestand werkelijk van schijf verwijderen?
+Do you really want to permanently delete the file %filename%?	Wilt u het bestand %filename% werkelijk definitief verwijderen?
+Do you really want to save the following parameters as default to the INI file	Wilt u de volgende parameters werkelijk als standaardwaarden in het INI-bestand opslaan
+Drag at the left or right border for asymmetric correction.	Sleep aan de linker- of rechterrand voor asymmetrische correctie.
+EXIF date successfully set on %d images, failed on %d images	EXIF-datum ingesteld voor %d afbeeldingen; mislukt voor %d afbeeldingen
+Edit	Bewerken
+Enable/disable automatic contrast correction (histogram equalization)	Automatische contrastcorrectie in-/uitschakelen (histogramegalisatie)
+Enable/disable automatic density correction (local brightness correction)	Automatische dichtheidscorrectie in-/uitschakelen (lokale helderheidscorrectie)
+Enable/disable full screen mode	Volledig scherm in-/uitschakelen
+Enable/disable high quality resampling	Hoge kwaliteit resampling in-/uitschakelen
+Enable/disable keeping of geometry related (zoom/pan/rotation)	Behouden van geometrie (zoomen/verschuiven/draaien) in-/uitschakelen
+Enable/disable landscape picture enhancement mode	Optimalisatie voor landschapsfoto's in-/uitschakelen
+Error	Fout
+Error during rename/copy	Fout tijdens hernoemen/kopiëren
+Error saving file	Fout bij opslaan van bestand
+Error while writing the following registry key	Fout bij schrijven van de volgende registersleutel
+Error writing file to disk!	Fout bij schrijven van bestand naar schijf!
+Example:	Voorbeeld:
+Exif Date Time:	EXIF-datum en -tijd:
+Exposure bias (EV):	Belichtingscompensatie (EV):
+Exposure time (s):	Belichtingstijd (s):
+Extension	Extensie
+Extracted number from original file name	Uit oorspronkelijke bestandsnaam overgenomen nummer
+F-Number:	F-getal:
+File name	Bestandsnaam
+File size	Bestandsgrootte
+File type	Bestandstype
+Fill page with crop	Pagina vullen en bijsnijden
+Fill with crop	Vullen en bijsnijden
+Fill with crop (no zoom)	Vullen en bijsnijden (niet zoomen)
+Filter:	Filter:
+Fit image to screen	Afbeelding aan venster aanpassen
+Fit to page	Aan pagina aanpassen
+Fit to screen	Aan venster aanpassen
+Fit to screen (no zoom)	Aan venster aanpassen (niet zoomen)
+Flash fired:	Flitser gebruikt:
+Focal length (mm):	Brandpuntsafstand (mm):
+Forward mouse button	Muisknop Vooruit
+Full screen mode	Volledig scherm
+Goto first/last image of current folder (using sort order as defined)	Naar eerste/laatste afbeelding in huidige map (volgens ingestelde sortering)
+Goto next image	Naar volgende foto
+Goto previous image	Naar vorige foto
+Height	Hoogte
+Hide histogram	Histogram verbergen
+High quality resampling	Resampling van hoge kwaliteit
+Hour / Minute (as numbers)	Uur / minuut (als getallen)
+ISO Speed:	ISO-waarde:
+Image Pixels	Afbeeldingspixels
+Image files in folder	Afbeeldingsbestanden in map
+Image height:	Afbeeldingshoogte:
+Image width and height must be dividable by the JPEG block size (8 or 16) for lossless transformations!	Voor transformaties zonder kwaliteitsverlies moeten de breedte en hoogte deelbaar zijn door de JPEG-blokgrootte (8 of 16)!
+Image width:	Afbeeldingsbreedte:
+Images	Afbeeldingen
+Increase/decrease auto color cast correction amount	Sterkte automatische kleurzweemcorrectie verhogen/verlagen
+Increase/decrease auto contrast correction amount	Sterkte automatische contrastcorrectie verhogen/verlagen
+Increase/decrease brightness	Helderheid verhogen/verlagen
+Increase/decrease contrast	Contrast verhogen/verlagen
+Increase/decrease darkening of highlights (LDC must be on)	Donkerder maken van hoge lichten verhogen/verlagen (LDC moet aan staan)
+Increase/decrease lightening of shadows (LDC must be on)	Lichter maken van schaduwen verhogen/verlagen (LDC moet aan staan)
+Increase/decrease sharpness	Scherpte verhogen/verlagen
+Insufficient rights to change the privilege (DACL) on the registry entry. Continue?	Onvoldoende rechten om de machtigingen (DACL) van de registervermelding te wijzigen. Doorgaan?
+JPEGView Help	JPEGView-help
+JPEGView is a lean, fast and highly configurable viewer/editor for JPEG, BMP, PNG, WEBP, TGA, GIF and TIFF images with a minimal GUI.	JPEGView is een compacte, snelle en uitgebreid instelbare viewer/editor voor JPEG-, BMP-, PNG-, WEBP-, TGA-, GIF- en TIFF-afbeeldingen met een minimale gebruikersinterface.
+JPEGView is registered as default viewer for the selected file formats.	JPEGView is als standaardviewer voor de gekozen bestandsindelingen geregistreerd.
+Keep aspect ratio on crop	Beeldverhouding behouden bij bijsnijden
+Keep parameters	Parameters behouden
+Keep processing parameters between images	Bewerkingsparameters behouden bij wisselen tussen afbeeldingen
+Known keys:	Bekende toetsen:
+Lanczos/Bicubic	Lanczos/bicubisch
+Landscape	Liggend
+Landscape picture enhancement mode	Optimalisatie voor landschapsfoto's
+Last modification date/time	Laatste wijzigingsdatum/-tijd
+Left	Links
+Left mouse & drag	Linkermuisknop en slepen
+Licensed under the GNU general public license (GPL), see readme file for details	Uitgebracht onder de GNU General Public License (GPL); zie het leesmij-bestand voor details
+Lighten Shadows	Schaduwen lichter maken
+Local density correction	Lokale dichtheidscorrectie
+Location:	Locatie:
+Loop folder	Map herhalen
+Loop recursively	Inclusief submappen herhalen
+Loop siblings	Mappen op hetzelfde niveau herhalen
+Loop through files in current directory and all sibling folders (folders on same level)	Bestanden in de huidige map en alle mappen op hetzelfde niveau herhalen
+Loop through files in current directory and all subfolders	Bestanden in de huidige map en alle submappen herhalen
+Loop through files in current folder	Bestanden in de huidige map herhalen
+Lossless JPEG transformations	JPEG-transformaties zonder kwaliteitsverlies
+M - G	M - G
+Magenta-Green	Magenta-groen
+Manage 'Open image with' menu...	Menu 'Afbeelding openen met' beheren...
+Margins:	Marges:
+Mark image for toggling. Use %s to toggle between marked and current image	Afbeelding markeren om te wisselen. Gebruik %s om tussen de gemarkeerde en huidige afbeelding te wisselen
+Maximize/restore to/from virtual desktop (only for multi-monitor systems)	Maximaliseren op/herstellen vanaf virtueel bureaublad (alleen bij meerdere beeldschermen)
+Menu entries:	Menu-items:
+Modification date:	Wijzigingsdatum:
+Modifier keys:	Wijzigingstoetsen:
+Month / Short form (text)	Maand / korte vorm (tekst)
+Mouse wheel	Muiswiel
+Navigation	Navigatie
+New	Nieuw
+New height:	Nieuwe hoogte:
+New name (>> : file gets copied)	Nieuwe naam (>> : bestand wordt gekopieerd)
+New name contains backslash character!	Nieuwe naam bevat een backslash-teken!
+New size:	Nieuwe grootte:
+New width:	Nieuwe breedte:
+Next image	Volgende foto
+No image loaded!	Geen afbeelding geladen!
+No user INI file exists yet. Create user INI file from INI file template?	Er bestaat nog geen gebruikers-INI-bestand. Een gebruikers-INI-bestand maken op basis van de sjabloon?
+None	Geen
+Not enough memory available	Onvoldoende geheugen beschikbaar
+Note: Set the key 'CropWithoutPromptLosslessJPEG=true' in the INI file to always crop without showing this message.	Opmerking: stel in het INI-bestand 'CropWithoutPromptLosslessJPEG=true' in om altijd zonder deze melding bij te snijden.
+Number (consecutively numbered)	Nummer (doorlopend genummerd)
+Number of CPU cores used	Aantal gebruikte CPU-kernen
+Number of JPEG files in folder: %d	Aantal JPEG-bestanden in map: %d
+Number with N digits	Nummer met N cijfers
+OK	OK
+Old name	Oude naam
+Open folder containing image and select in Windows Explorer	Map met afbeelding openen en bestand in Verkenner selecteren
+Open new image or slideshow file	Nieuwe afbeelding of diavoorstellingsbestand openen
+Order files by	Bestanden sorteren op
+Orientation:	Afdrukstand:
+Original file extension	Oorspronkelijke bestandsextensie
+Original file name (with extension)	Oorspronkelijke bestandsnaam (met extensie)
+Original file name (without extension)	Oorspronkelijke bestandsnaam (zonder extensie)
+Pan image	Afbeelding verschuiven
+Paper size:	Papierformaat:
+Parameter DB	Parameterdatabase
+Parameter DB error	Fout in parameterdatabase
+Parameter DB file '%s' could not be opened!	Parameterdatabasebestand '%s' kan niet worden geopend!
+Parameter DB file '%s' is not valid (invalid header)!	Parameterdatabasebestand '%s' is ongeldig (ongeldige header)!
+Paste from clipboard	Plakken vanaf klembord
+Pasting image from clipboard failed!	Plakken van afbeelding vanaf klembord is mislukt!
+Performing the lossless transformation failed!	Transformatie zonder kwaliteitsverlies is mislukt!
+Performing the transformation failed	Transformatie is mislukt
+Perspective Correction	Perspectiefcorrectie
+Pixels	Pixels
+Placeholders:	Variabelen:
+Portrait	Staand
+Press 'OK' to continue with registration or 'Cancel' to abort all registrations.	Klik op 'OK' om door te gaan met registreren of op 'Annuleren' om alle registraties af te breken.
+Press ESC to exit...	Druk op ESC om af te sluiten...
+Press any key to search the subdirectories for image files.	Druk op een toets om in de submappen naar afbeeldingsbestanden te zoeken.
+Preview	Voorbeeld
+Previous image	Vorige foto
+Print	Afdrukken
+Print Image	Afbeelding afdrukken
+Printer driver	Printerstuurprogramma
+Printer:	Printer:
+Project home page	Projectwebsite
+Radius	Straal
+Random	Willekeurig
+Reading the JPEG file from disk failed	Lezen van het JPEG-bestand van schijf is mislukt
+Reason:	Reden:
+Registering or unregistering file extensions in this registry area requires administrator privileges and cannot be done in JPEGView.	Voor het registreren of deregistreren van bestandsextensies in dit registergedeelte zijn beheerdersrechten vereist; dit kan niet vanuit JPEGView.
+Registration applies to the current user only.	Registratie geldt alleen voor de huidige gebruiker.
+Remove from	Verwijderen uit
+Rename	Naam wijzigen
+Rename/copy images to:	Afbeeldingen hernoemen/kopiëren naar:
+Renaming file failed!	Hernoemen van bestand is mislukt!
+Reset	Opnieuw instellen
+Resize Image	Afbeeldingsgrootte wijzigen
+Right	Rechts
+Right mouse button: Context menu	Rechtermuisknop: snelmenu
+Roll from bottom	Rollen vanaf onderkant
+Roll from left	Rollen vanaf links
+Roll from right	Rollen vanaf rechts
+Roll from top	Rollen vanaf bovenkant
+Rotate Image	Afbeelding draaien
+Rotate current file on disk lossless by 270 deg (W/H must be multiple of 16)	Huidig bestand zonder kwaliteitsverlies 270 graden draaien (W/H moeten een veelvoud van 16 zijn)
+Rotate current file on disk lossless by 90 deg (W/H must be multiple of 16)	Huidig bestand zonder kwaliteitsverlies 90 graden draaien (W/H moeten een veelvoud van 16 zijn)
+Rotate image 90 deg clockwise	Afbeelding 90 graden rechtsom draaien
+Rotate image 90 deg counter-clockwise	Afbeelding 90 graden linksom draaien
+Rotate image and fit to screen	Afbeelding draaien en aan venster aanpassen
+Rotate image by user-defined angle	Afbeelding over een zelfgekozen hoek draaien
+Rotate the image by dragging with the mouse.	Draai de afbeelding door met de muis te slepen.
+SIMD mode used	Gebruikte SIMD-modus
+Same as Image	Zelfde als afbeelding
+Saturation	Verzadiging
+Save	Opslaan
+Save (%s) / delete (%s) image processing parameters into/from parameter DB	Afbeeldingsbewerkingsparameters opslaan (%s) in / verwijderen (%s) uit parameterdatabase
+Save as (in screen size/resolution)	Opslaan als (met schermafmetingen/-resolutie)
+Save as template	Opslaan als sjabloon
+Save cropped image	Bijgesneden afbeelding opslaan
+Save processed image to JPEG file (original size)	Verwerkte afbeelding als JPEG opslaan (oorspronkelijke grootte)
+Save processed image to JPEG file (screen size)	Verwerkte afbeelding als JPEG opslaan (schermgrootte)
+Save to	Opslaan in
+Scaling mode:	Schaalmodus:
+Screen Pixels	Schermpixels
+Scroll from bottom	Schuiven vanaf onderkant
+Scroll from left	Schuiven vanaf links
+Scroll from right	Schuiven vanaf rechts
+Scroll from top	Schuiven vanaf bovenkant
+Select Printer...	Printer selecteren...
+Select all	Alles selecteren
+Select application	Toepassing selecteren
+Select file to display in 'File Open' dialog	Bestand kiezen voor het dialoogvenster 'Bestand openen'
+Select none	Niets selecteren
+Select parameter DB to restore	Terug te zetten parameterdatabase selecteren
+Set Fixed Crop Size	Vaste bijsnijdgrootte instellen
+Set JPEGView as default image viewer	JPEGView als standaard afbeeldingsviewer instellen
+Set timeout to n/10 sec, respectively n/100 sec (Ctrl+Shift)	Wachttijd instellen op n/10 sec., respectievelijk n/100 sec. (Ctrl+Shift)
+Shall existing entries be preserved (Yes) or be overwritten by the imported entries (No)?	Moeten bestaande vermeldingen behouden blijven (Ja) of door de geïmporteerde vermeldingen worden overschreven (Nee)?
+Sharpen	Verscherpen
+Sharpen low	Licht verscherpen
+Sharpen medium	Gemiddeld verscherpen
+Shortcut Help	Sneltoetsenoverzicht
+Shortcut key:	Sneltoets:
+Show filename	Bestandsnaam tonen
+Show first image in folder	Eerste afbeelding in map tonen
+Show grid lines	Rasterlijnen tonen
+Show histogram	Histogram tonen
+Show last image in folder	Laatste afbeelding in map tonen
+Show navigation panel	Navigatiepaneel tonen
+Show next image	Volgende foto tonen
+Show picture info (EXIF)	Fotogegevens tonen (EXIF)
+Show previous image	Vorige foto tonen
+Show/hide file name	Bestandsnaam tonen/verbergen
+Show/hide navigation panel	Navigatiepaneel tonen/verbergen
+Show/hide picture information (EXIF data)	Fotogegevens tonen/verbergen (EXIF-gegevens)
+Show/hide this help text	Deze helptekst tonen/verbergen
+Size:	Grootte:
+Slide from bottom	Schuiven vanaf onderkant
+Slide from left	Schuiven vanaf links
+Slide from right	Schuiven vanaf rechts
+Slide from top	Schuiven vanaf bovenkant
+Slideshow	Diavoorstelling
+Slideshow with timeout of 'n' seconds (ESC to stop)	Diavoorstelling met wachttijd van 'n' seconden (ESC om te stoppen)
+Software:	Software:
+Sort images by creation date, resp. modification date, resp. file name	Afbeeldingen sorteren op aanmaakdatum, wijzigingsdatum of bestandsnaam
+Source:	Bron:
+Target folders that do not yet exist are created as needed.	Doelmappen die nog niet bestaan worden zo nodig gemaakt.
+The directory '%s' does not contain any image files!	De map '%s' bevat geen afbeeldingsbestanden!
+The file '%s' could not be copied!	Het bestand '%s' kan niet worden gekopieerd!
+The file '%s' could not be read!	Het bestand '%s' kan niet worden gelezen!
+The file '%s' could not be renamed!	Het bestand '%s' kan niet worden hernoemd!
+The file '%s' does not contain a list of file names!	Het bestand '%s' bevat geen lijst met bestandsnamen!
+The file is read-only!	Het bestand is alleen-lezen!
+The following file extensions cannot be unregistered because they have been registered in the 'local machine' registry area.	De volgende bestandsextensies kunnen niet worden verwijderd omdat ze in het registergedeelte 'lokale computer' zijn geregistreerd.
+The following image extensions are protected by the operating system.	De volgende afbeeldingsextensies worden door het besturingssysteem beschermd.
+The imported param DB contains entries already present in active param DB.	De geïmporteerde parameterdatabase bevat vermeldingen die al in de actieve parameterdatabase staan.
+The new size is too large - width or height is larger than 65535 or total number of pixels is too large!	De nieuwe grootte is te groot: de breedte of hoogte is groter dan 65535 of het totale aantal pixels is te groot!
+The old parameter DB file '%s' could not be renamed during conversion to new format!	Het oude parameterdatabasebestand '%s' kan tijdens omzetting naar de nieuwe indeling niet worden hernoemd!
+The operation failed because not enough memory is available!	De bewerking is mislukt omdat er onvoldoende geheugen beschikbaar is!
+The parameter DB file '%s' has been created by a newer version of JPEGView!	Het parameterdatabasebestand '%s' is door een nieuwere versie van JPEGView gemaakt!
+The transformation can be applied if the image is cropped to the next matching size but this will remove some border pixels.	De transformatie kan worden toegepast als de afbeelding tot de eerstvolgende passende grootte wordt bijgesneden, maar daardoor verdwijnen enkele randpixels.
+These values will override the values from the INI file located in the program folder of JPEGView!	Deze waarden overschrijven de waarden uit het INI-bestand in de programmamap van JPEGView!
+Threshold	Drempelwaarde
+Title:	Titel:
+Toggle between screens (only for multi-monitor systems)	Tussen beeldschermen wisselen (alleen bij meerdere beeldschermen)
+Toggle window always on top mode	Venster altijd op voorgrond in-/uitschakelen
+Toggle window title bar hidden mode	Verborgen venstertitelbalk in-/uitschakelen
+Top	Boven
+Transition Effect	Overgangseffect
+Unregistering not possible	Registratie verwijderen is niet mogelijk
+Unsharp mask...	Onscherp masker...
+Update user settings with new settings from settings template file?	Gebruikersinstellingen bijwerken met nieuwe instellingen uit het instellingssjabloon?
+Use the 'Default Programs' configuration dialog from the operating system instead.	Gebruik in plaats hiervan het dialoogvenster 'Standaardprogramma's' van het besturingssysteem.
+Use the mouse to draw a line that shall be horizontal or vertical.	Teken met de muis een lijn die horizontaal of verticaal moet worden.
+Warning	Waarschuwing
+Width	Breedte
+Window mode	Venstermodus
+Windows 8 (and above) blocks JPEGView from changing the default program for these file extensions.	Windows 8 (en hoger) verhindert dat JPEGView het standaardprogramma voor deze bestandsextensies wijzigt.
+Writing the resulting JPEG file to disk failed	Schrijven van het resulterende JPEG-bestand naar schijf is mislukt
+Y - B	G - B
+Year short form (2 digits)	Jaar in korte vorm (2 cijfers)
+Yellow-Blue	Geel-blauw
+Zoom 1:1 (100 %)	Ware grootte (100%)
+Zoom in (%s)/Zoom out (%s)	Inzoomen (%s)/uitzoomen (%s)
+Zoom in/out image	Op afbeelding in-/uitzoomen
+Zoom mode (drag mouse to zoom)	Zoommodus (sleep met de muis om te zoomen)
+and image processing (brightness/contrast/sharpen) parameters between images	en afbeeldingsbewerkingsparameters (helderheid/contrast/verscherpen) bij wisselen tussen afbeeldingen
+cm	cm
+in	inch
+new menu entry	nieuw menu-item
+no	nee
+off	uit
+on	aan
+user-defined	zelfgekozen
+yes	ja
+
+// ::: Popup Menu Strings ::: (unsorted to preserve context) //
+Stop slide show/movie	Diavoorstelling/film stoppen
+Open image...	Openen...
+Open image with	Afbeelding openen met
+Save processed image...	Verwerkte afbeelding opslaan...
+Reload image	Afbeelding opnieuw laden
+Open containing folder in Explorer	Bijbehorende map openen in Verkenner
+Print image...	Afbeelding afdrukken...
+Batch rename/copy...	Meerdere bestanden hernoemen/kopiëren...
+Set modification date	Wijzigingsdatum instellen
+to current date	op huidige datum
+to EXIF date	op EXIF-datum
+to EXIF date (all files in folder)	op EXIF-datum (alle bestanden in map)
+Set as desktop wallpaper	Als bureaubladachtergrond instellen
+Use original image	Oorspronkelijke afbeelding gebruiken
+Use processed image as displayed	Verwerkte afbeelding gebruiken zoals weergegeven
+Copy to clipboard	Naar klembord kopiëren
+Copy original size image	Afbeelding op oorspronkelijke grootte kopiëren
+Copy file path	Bestandspad kopiëren
+Display order	Sorteervolgorde
+Modification date	Wijzigingsdatum
+Creation date	Aanmaakdatum
+Play folder as slideshow/movie	Map als diavoorstelling/film afspelen
+Waiting time	Wachttijd
+1 sec	1 sec.
+2 sec	2 sec.
+3 sec	3 sec.
+4 sec	4 sec.
+5 sec	5 sec.
+7 sec	7 sec.
+10 sec	10 sec.
+20 sec	20 sec.
+Transition Speed	Overgangssnelheid
+Very fast	Zeer snel
+Fast	Snel
+Normal	Normaal
+Slow	Langzaam
+Very slow	Zeer langzaam
+Movie	Film
+Playback speed	Afspeelsnelheid
+5 fps	5 fps
+10 fps	10 fps
+25 fps	25 fps
+30 fps	30 fps
+50 fps	50 fps
+100 fps	100 fps
+Transform image	Afbeelding transformeren
+Rotate +90	90° rechtsom draaien
+Rotate -90	90° linksom draaien
+Rotate...	Draaien...
+Change size...	Grootte wijzigen...
+Perspective correction...	Perspectiefcorrectie...
+Mirror horizontally	Horizontaal spiegelen
+Mirror vertically	Verticaal spiegelen
+Rotate 180	180° draaien
+Auto correction	Automatische correctie
+Save parameters to DB	Parameters opslaan in database
+Clear parameters from DB	Parameters uit database wissen
+Zoom	Zoomen
+Span all screens	Over alle beeldschermen spreiden
+Fit window to image	Venster aan afbeelding aanpassen
+Hide window title bar	Titelbalk verbergen
+Set window always on top	Venster altijd op voorgrond
+Settings/Admin	Instellingen/beheer
+Edit global settings...	Algemene instellingen bewerken...
+Edit user settings...	Gebruikersinstellingen bewerken...
+Update user settings...	Gebruikersinstellingen bijwerken...
+Set current parameters as default values...	Huidige parameters als standaardwaarden instellen...
+Set as default viewer...	Als standaardviewer instellen...
+Backup parameter DB...	Back-up van parameterdatabase maken...
+Restore parameter DB...	Parameterdatabase herstellen...
+User commands	Gebruikersopdrachten
+About JPEGView...	Over JPEGView...
+Exit	Afsluiten
+Crop Selection	Selectie bijsnijden
+Crop Selection Lossless...	Selectie bijsnijden zonder kwaliteitsverlies...
+Copy Selection to Clipboard	Selectie naar klembord kopiëren
+Crop Mode	Bijsnijdmodus
+Free	Vrij
+Fixed size...	Vaste grootte...
+Zoom to Selection	Op selectie inzoomen
+
+// ::: INFO: Same Translations [15] ::: (Summary to assist translators: All strings which are known not to need translation [String == Translation]) - Auto-generated by script //
+//! C - R
+//! Contrast
+//! Filter:
+//! M - G
+//! OK
+//! Pixels
+//! Printer:
+//! Software:
+//! cm
+//! 5 fps
+//! 10 fps
+//! 25 fps
+//! 30 fps
+//! 50 fps
+//! 100 fps
+
+// ::: STATUS: Last Checked/Updated by Script ::: 2026-09-21T17:08:08.053320+00:00 //
+//! Translation Progress: 100%
+//! * Total (Strings + Menu) = 429
+//! * Done = 429
+//! * Missing = 0 (0%)
