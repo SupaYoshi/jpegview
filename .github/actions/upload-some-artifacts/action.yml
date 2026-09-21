@@ -6,7 +6,7 @@ inputs:
   branch-match:
     description: branch to match to get all artifacts, or only some
     required: false
-    default: master
+    default: build/dutch-heic-customer
 
   platform-arch:
     description: The architecture for naming artifact
